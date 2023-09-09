@@ -1,38 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
 .App {
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  background-color: rgb(3, 17, 15);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App .menuContainer {
+  width: 650px;
+  /* border: 2px solid wheat; */
+}
+
+/** Menu Header */
+.menuContainer .menuHeader {
+  padding: 20px 0px 30px 0px;
+}
+.menuHeader h1 {
+  color: rgb(0, 255, 115);
+  font-weight: 400;
+  font-size: 3.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/** Menu Sub-header */
+.menuContainer .subHeader {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  font-family: "Quicksand", sans-serif;
+  /* background-color: darkcyan; */
+}
+
+.subHeader h2 {
+  font-size: 1.8rem;
+  border-top: 2px solid rgb(0, 255, 115);
+  border-bottom: 2px solid rgb(0, 255, 115);
+  padding: 7px 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.subHeader p {
+  width: 75%;
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
+}
+
+/** Menu List */
+.menuContainer .menuList {
+  width: 100%;
+  /* border: 2px solid darkgoldenrod; */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+  padding: 30px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Menu Item */
+.menuList .menuItem {
+  max-width: 300px;
+  display: flex;
+  /* border: 2px solid white; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menuItem .itemImage {
+  width: 90px;
+  height: 90px;
+  /* background-color: darkcyan; */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.itemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menuItem .itemAbout {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-size: 1rem;
+}
+
+.itemAbout .itemTitle {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: rgb(0, 255, 115);
+  letter-spacing: 0.05em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.itemTitle abbr {
+  text-decoration: none;
+}
+
+.itemAbout .itemDesc {
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  word-spacing: 0.05rem;
+  font-style: oblique;
+}
+
+.itemAbout .itemStatus {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+/** Menu Footer */
+.menuContainer .menuFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuFooter :nth-child(1) {
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
+}
+
+.menuFooter :nth-child(2) {
+  all: unset;
+  padding: 6px 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+  background: rgb(0, 255, 115);
+  border-radius: 2px;
 }
